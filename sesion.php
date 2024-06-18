@@ -86,7 +86,7 @@ require './includes/templates/funciones.php';
                                     <div class="col-6 py-1"><?php echo $sesiones['hora_inicio'] . "-" .  $sesiones['hora_fin'] ?></div>
                                 </div>
                             </div>
-                            <a href="" class="btn btn-primary px-4 mx-auto mb-4">Ingresar</a>
+                            <a href="<?php echo $sesiones['enlace_zoom'] ?>" class="btn btn-primary px-4 mx-auto mb-4">Ingresar</a>
                         </div>
                     </div>
 

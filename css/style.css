@@ -5611,6 +5611,59 @@ a.close.disabled {
 .toast-body {
   padding: 0.75rem;
 }
+body.overflow-hidden {
+  overflow: hidden;
+}
+/*Modal Imagenes*/
+.modal1 {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn ease-in 0.5s;
+}
+
+.modal1.fade-out {
+  animation: fadeOut ease-in 0.5s;
+}
+
+.modal1 img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.btn-cerrar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: none;
+  color: #000000;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 .modal-open {
   overflow: hidden;

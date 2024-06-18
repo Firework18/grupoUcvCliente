@@ -120,3 +120,50 @@ inputs.forEach(input => {
 	input.addEventListener("focus", addcl);
 	input.addEventListener("blur", remcl);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    function mostrarImagen(nombreImagen) {
+        console.log('hola');
+        const imagen = document.createElement('IMG');
+        imagen.src = `./imagenes/${nombreImagen}`;
+        imagen.alt = 'Imagen Galería';
+        
+        console.log('Imagen: '+imagen.src);
+
+
+        const modal = document.createElement('DIV');
+        modal.classList.add('modal1');
+        modal.onclick = cerrarModal;
+
+        const cerrarModalBtn = document.createElement('BUTTON');
+        cerrarModalBtn.textContent = 'X';
+        cerrarModalBtn.classList.add('btn-cerrar');
+        cerrarModalBtn.onclick = cerrarModal;
+
+        modal.appendChild(imagen);
+        modal.appendChild(cerrarModalBtn);
+
+        document.body.classList.add('overflow-hidden');
+        document.body.appendChild(modal);
+    }
+
+    function cerrarModal() {
+        const modal = document.querySelector('.modal1');
+        if (modal) {
+            modal.classList.add('fade-out');
+            setTimeout(() => {
+                modal.remove();
+                document.body.classList.remove('overflow-hidden');
+            }, 500);
+        }
+    }
+
+    const imagenes = document.querySelectorAll('[data-id]');
+    imagenes.forEach(imagen => {
+        imagen.addEventListener('click', function() {
+            const nombreImagen = this.getAttribute('data-id');
+            mostrarImagen(nombreImagen);
+        });
+    });
+});
+
