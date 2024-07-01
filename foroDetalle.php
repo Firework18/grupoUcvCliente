@@ -79,7 +79,7 @@ if ($auth && $rol == '0') :
 
             <a href="contact.php" class="nav-item nav-link">Contáctanos</a>
         </div>
-        <a href="perfil.php?resultado=<?php echo $_SESSION['id'] ?>" class="nav-item nav-link"><i class="fas fa-cog"></i></a>
+        <a href="perfil.php?resultado=<?php echo $usuario ?>" class="nav-item nav-link"><i class="fas fa-cog"></i></a>
         <a href="cerarSesion.php" class="btn btn-primary px-4">Cerrar Sesion</a>
     </div>
     </nav>
@@ -104,7 +104,7 @@ if ($auth && $rol == '0') :
                     <!-- Mostrar la imagen del tema -->
                     <?php if (!empty($tema['imagen_tema'])) : ?>
                         <div class="mb-3">
-                            <img src="imagenes/<?php echo $tema['imagen_tema']; ?>" alt="Imagen del tema" class="img-fluid rounded" style="max-width: 100%; height: auto; max-height: 400px;">
+                            <img src="imagenes/<?php echo $tema['imagen_tema']; ?>" alt="Imagen del tema" class="img-fluid rounded" style="max-width: 100%; height: auto; max-height: 400px;" data-id="<?php echo ($tema['imagen_tema']); ?>">
                         </div>
                     <?php endif; ?>
                 </div>

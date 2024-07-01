@@ -114,13 +114,7 @@ if ($auth && $rol == '0') :
                     <div class="navbar-nav font-weight-bold mx-auto py-0">
                         <a href="index.php" class="nav-item nav-link active">Inicio</a>
                         <a href="nosotros.php" class="nav-item nav-link">Sobre Nosotros</a>
-                        <div class="nav-item dropdown">
-                            <a href="sesion.php" class="nav-link dropdown-toggle" data-toggle="dropdown">Sesiones</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="sesion.php" class="dropdown-item">Sesiones</a>
-                                <a href="sesionE.php" class="dropdown-item">Sesiones creadas por estudiantes</a>
-                            </div>
-                        </div>
+                        <a href="sesion.php" class="nav-item nav-link">Sesiones</a>
                         <a href="profesores.php" class="nav-item nav-link">Profesores</a>
                         <a href="registrarSesion.php" class="nav-item nav-link">Solicitar Sesión</a>
                         <a href="foro.php" class="nav-item nav-link">Foro de Discusión</a>

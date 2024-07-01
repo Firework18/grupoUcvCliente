@@ -1,5 +1,5 @@
 <?php
-session_start(); // Asegúrate de que la sesión se inicie al principio
+session_start(); 
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -15,20 +15,20 @@ if (isset($_POST['enviar'])) {
     $mail = new PHPMailer(true);
 
     try {
-        // Configuración del servidor SMTP
+
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'adelcarpiobravo@gmail.com'; // Tu dirección de correo Gmail
-        $mail->Password = 'lngk bcsl xnkw ltur'; // Tu contraseña de Gmail o App Password
+        $mail->Username = 'adelcarpiobravo@gmail.com'; 
+        $mail->Password = 'lngk bcsl xnkw ltur'; 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        // Destinatarios
+     
         $mail->setFrom('adelcarpiobravo@gmail.com', 'Administrador');
-        $mail->addAddress('adelcarpiobravo@gmail.com', $nombre); // Puedes agregar destinatarios dinámicamente aquí
+        $mail->addAddress('adelcarpiobravo@gmail.com', $nombre); 
 
-        // Contenido del correo
+        
         $mail->isHTML(true);
         $mail->Subject = $asunto;
         $mail->Body    = "Nombre: $nombre<br>Correo: $correo<br>Mensaje: $mensaje";
